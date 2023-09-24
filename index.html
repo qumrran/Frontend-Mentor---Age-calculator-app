@@ -17,28 +17,43 @@
 
         <section class="app__inputDate">
 
-            <label for="day-input">Day</label>
-            <input type="number" class="app__inputDate__day__input" name="day" min="1" max="31">
+            <div class="app__inputDate__container">
+                <label for="day-input" class="app__inputDate__container__label labelDay">Day</label>
+                <input type="number" class="app__inputDate__container__input day" name="day" min="1" max="31" placeholder="DD">
+                <span class="app__inputDate__container__errorDay"></span>
+            </div>
 
-            <label for="month-input">Mounth </label>
-            <input type="number" class="app__inputDate__month__input" name="month" min="1" max="12">
+          <div class="app__inputDate__container">
+                <label for="month-input" class="app__inputDate__container__label labelMonth">Month </label>
+                <input type="number" class="app__inputDate__container__input month" name="month" min="1" max="12" placeholder="MM">
+                <span class="app__inputDate__container__errorMonth"></span>
+          </div>
 
-            <label for="year-input">Year</label>
-            <input type="number" class="app__inputDate__year__input" name="year" min="1900" max="2099">
+        <div class="app__inputDate__container">
+                <label for="year-input" class="app__inputDate__container__label labelYear">Year</label>
+                <input type="number" class="app__inputDate__container__input year" name="year" min="1900" max="2099" placeholder="YYYY">
+                <span class="app__inputDate__container__errorYear"></span>
+        </div>
 
         </section>
 
-        <div class="app_result">
-            <p class="app_result__static"><span class="app_result__dynamic__year">--</span> years</p>
-            <p class="app_result__static"><span class="app_result__dynamic__month">--</span> months</p>
-            <p class="app_result__static"><span class="app_result__dynamic__day">--</span> days</p>
+        <div class="app__btnsection">
+            <div class="app__btnsection__horizontalLine"></div>
+            
+            <button class="app__btnsection__btn"><img src="./assets/images/icon-arrow.svg" alt="arrow icon" class="app__btnsection__btn__icon"></button>
+            
+
+        </div>
+
+        <div class="app__result">
+            <div class="app__result__cointainer">
+                <p class="app__result__cointainer__static"><span class="app__result__cointainer__dynamic outputYear">38</span> years</p>
+                <p class="app__result__cointainer__static"><span class="app__result__cointainer__dynamic outputMonth">3</span> months</p>
+                <p class="app__result__cointainer__static"><span class="app__result__cointainer__dynamic outputDay">26</span> days</p>
+            </div>
         </div>
 
     </main>
-
-
-
-
 
 
 

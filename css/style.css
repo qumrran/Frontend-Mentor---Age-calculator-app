@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -7,4 +7,144 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 86%);
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  width: clamp(343px, 70%, 600px);
+  height: clamp(486px, 50%, 500px);
+  border-radius: 20px 20px 100px 20px;
+  padding: 54px 24px;
+  background-color: hsl(0, 0%, 100%);
+}
+@media screen and (min-width: 600px) {
+  .app {
+    padding: 55px;
+  }
+}
+
+.app__inputDate {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 65px;
+}
+@media screen and (min-width: 670px) {
+  .app__inputDate {
+    width: 80%;
+  }
+}
+.app__inputDate__container {
+  display: flex;
+  flex-direction: column;
+}
+.app__inputDate__container__label {
+  text-transform: uppercase;
+  color: hsl(0, 1%, 44%);
+  font-size: 12px;
+  font-weight: 800;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+}
+.app__inputDate__container__input {
+  width: 88px;
+  height: 54px;
+  border: 2px solid hsl(0, 0%, 86%);
+  border-radius: 5px;
+}
+@media screen and (min-width: 850px) {
+  .app__inputDate__container__input {
+    width: 110px;
+  }
+}
+.app__inputDate__container input::placeholder {
+  font-family: "Poppins", sans-serif;
+  color: hsl(0, 1%, 44%);
+  font-size: 16px;
+}
+.app__inputDate__container__errorDay {
+  font-family: "Poppins", sans-serif;
+  color: hsl(0, 100%, 67%);
+  font-size: 10px;
+  font-weight: 400;
+  font-style: italic;
+  padding-top: 5px;
+  padding-right: 6px;
+}
+.app__inputDate__container__errorMonth {
+  font-family: "Poppins", sans-serif;
+  color: hsl(0, 100%, 67%);
+  font-size: 10px;
+  font-weight: 400;
+  font-style: italic;
+  padding-top: 5px;
+  padding-right: 6px;
+}
+.app__inputDate__container__errorYear {
+  font-family: "Poppins", sans-serif;
+  color: hsl(0, 100%, 67%);
+  font-size: 10px;
+  font-weight: 400;
+  font-style: italic;
+  padding-top: 5px;
+  padding-right: 6px;
+}
+
+.app__btnsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 45px;
+}
+.app__btnsection__horizontalLine {
+  width: 100%;
+  border: 1.5px solid hsl(0, 0%, 86%);
+  border-radius: 2px;
+}
+.app__btnsection__btn {
+  position: absolute;
+  transform: translateY(-32px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .app__btnsection__btn {
+    align-self: flex-end;
+  }
+}
+.app__btnsection__btn__icon {
+  width: 25px;
+  height: 25px;
+}
+
+.app__result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 60px;
+}
+@media screen and (min-width: 600px) {
+  .app__result {
+    align-items: flex-start;
+  }
+}
+.app__result__cointainer__dynamic {
+  color: hsl(259, 100%, 65%);
+}
+.app__result__cointainer__static {
+  margin: 0px;
 }/*# sourceMappingURL=style.css.map */

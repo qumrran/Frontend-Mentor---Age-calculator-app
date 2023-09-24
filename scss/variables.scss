@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 
-
-
 $Poppins: 'Poppins', sans-serif;
-
 
 $purple: hsl(259, 100%, 65%);
 $light-red: hsl(0, 100%, 67%);
@@ -12,3 +9,16 @@ $off-white: hsl(0, 0%, 94%);
 $light-grey: hsl(0, 0%, 86%);
 $smokey-grey: hsl(0, 1%, 44%);
 $off-black: hsl(0, 0%, 8%);
+
+
+@mixin input-errors {
+	font-family: $Poppins;
+	color: $light-red;
+	font-size: 10px;
+	font-weight: 400;
+	font-style: italic;
+    padding-top: 5px;
+    padding-right: 6px;
+   
+   
+}

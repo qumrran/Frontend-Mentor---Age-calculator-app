@@ -1,2 +1,136 @@
 @import 'reset';
 @import 'variables';
+
+body {
+    min-height: 100vh;
+    background-color: $light-grey;
+    display: grid;
+    place-items: center;
+}
+
+.app {
+    width: clamp(343px, 70%, 600px);
+    height: clamp(486px, 50%, 500px);
+    border-radius: 20px 20px 100px 20px;
+    padding: 54px 24px;
+    background-color: $white;
+    @media screen and (min-width: 600px) {
+      padding: 55px;
+     }
+  }
+  
+
+  .app__inputDate {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 65px;
+    @media screen and (min-width: 670px) {
+      width: 80%;
+     }
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        &__label {
+            text-transform: uppercase;
+            color: $smokey-grey;
+            font-size: 12px;
+            font-weight: 800;
+            padding-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        &__input {
+         width: 88px;
+         height: 54px;
+         border: 2px solid $light-grey;
+         border-radius: 5px;
+         @media screen and (min-width: 850px) {
+          width: 110px;
+         }
+        }
+        input::placeholder {
+          font-family: $Poppins;
+          color: $smokey-grey;
+          font-size: 16px;
+          
+         }
+        &__errorDay {
+          @include input-errors;
+        }
+
+        &__errorMonth {
+          @include input-errors;
+        }
+       
+        &__errorYear {
+          @include input-errors;
+        }
+        
+    }
+    
+
+  }
+
+  .app__btnsection {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+   padding-bottom: 45px;
+   
+ 
+    &__horizontalLine {
+    width: 100%;
+    border: 1.5px solid $light-grey;
+    border-radius: 2px;
+
+    }
+    &__btn {
+    position: absolute;
+    transform: translateY(-32px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: $purple;
+    cursor: pointer;
+    
+    
+    @media screen and (min-width: 600px) {
+      align-self: flex-end;
+     }
+   
+    &__icon {
+        width: 25px;
+        height: 25px;
+    }
+    }
+  }
+ 
+
+  .app__result {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $Poppins;
+    font-size: 50px;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 60px;
+    @media screen and (min-width: 600px) {
+     align-items: flex-start;
+    }
+    &__cointainer {
+        &__dynamic {
+            color: $purple; 
+        }
+    
+        &__static {
+          margin: 0px;
+        }
+    }
+    
+  }
+
+ 
